@@ -1,0 +1,9 @@
+- name: Configuramos el fichero interfaces en el cliente
+  template: 
+    src: etc/network/interfaces
+    dest: /etc/network/interfaces
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - Restart

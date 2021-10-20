@@ -1,0 +1,17 @@
+- hosts: all
+  become: true
+  roles:
+   - role: commons
+
+- hosts: router_nat
+  become: true
+  roles:
+   - role: nat
+
+- hosts: cliente
+  become: true
+  roles:
+   - role: interfaces
+
+
+

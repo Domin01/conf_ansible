@@ -1,0 +1,5 @@
+- name: Restart
+  command: sudo /etc/init.d/networking restart
+  become: yes
+  become_user: root
+  ignore_errors: yes

@@ -1,0 +1,14 @@
+#Configurar interfaz router
+r_interfaz1: eth0
+r_interfaz2: eth1
+r_interfaz3: eth2
+r_ip_eth1: 192.168.0.1
+r_mask_eht1: 255.255.255.0
+r_red3: 192.168.0.0/24
+
+#Configurar cliente
+
+c_interfaz1: eth0
+c_interfaz2: eth1
+c_ip_eth1: 192.168.0.3
+c_mask_eht1: 255.255.255.0

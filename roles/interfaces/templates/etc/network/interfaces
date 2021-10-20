@@ -1,0 +1,21 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# Red mantenimiento
+allow-hotplug {{c_interfaz1}}
+iface {{c_interfaz1}} inet dhcp
+	post-up ip route del default dev $IFACE || true
+
+# Red veryisolated
+auto {{c_interfaz2}}
+iface {{c_interfaz2}} inet static
+      address {{c_ip_eth1}}
+      netmask {{c_mask_eht1}}
+      gateway {{r_ip_eth1}}
+
+
